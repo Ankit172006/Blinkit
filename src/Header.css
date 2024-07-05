@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.main_header
+{
+display: flex;
+align-items: center;
+height: 90px;
+}
+.container1
+{
+    display: flex;
+}
+.logo_con img
+{
+ height: 86px;
+ width: 176px;
+ object-fit: cover;
+}
+.location_con
+{
+    width: 320px;
+    height: 86px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.min11
+{
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    margin-bottom: 6px;
+    font-size: 18px;
+}
+.searchbox
+{
+    width: 699px;
+    display: flex;
+    align-items: center;
+}
+.searchbox input
+{
+    width: 670px;
+    height: 35px;
+    padding-left: 7px;
+    border: none;
+}
+::placeholder
+{
+   color: rgb(91, 90, 90);
+   font-weight: 500;
+}
+.container22
+{
+    display: flex;
+    align-items: center;
+}
+.login_btn
+{
+    width: 162px;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(54, 54, 54);
+    font-family: system-ui;
+    transition: font-size 0.5s ease 0s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 86px;
+}
+.container22 a
+{
+    text-decoration: none;
+}
+.cart_con
+{
+   width: 162px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 86px;
+}
+.cart
+{
+    width: 112px;
+    height: 52px;
+    background-color: rgb(12, 131, 31);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    gap: 5px;
+    font-family: serif;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.big_banner img
+{
+    width: 80%;
+    height: 260px;
+}
+.collection_banner img
+{
+    width: 335px;
+    height: 195px;
+}
+.banner_section
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px;
+}
+.big_banner
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.collection_banner
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+@media only screen and (max-width:565px)
+{
+ .location_con
+ {
+    display: none;
+ }   
+ .searchbox
+ {
+    display: none;
+ }
+ .collection_banner
+ {
+    flex-direction: column;
+ }
+ .login_btn
+ {
+   width: 120px;
+ }
+ .big_banner
+ {
+    display: none;
+ }
+ .main_item_con 
+ {
+    overflow: scroll;
+ }
+ .logo_con
+ {
+    width: 97%;
+ }
+}
