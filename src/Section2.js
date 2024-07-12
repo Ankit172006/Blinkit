@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Section2() {
     const dairydata =[
         {
-            id:1,
+            id:"1",
             img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/479207a.jpg?ts=1687950375",
             productname:"Verka Paneer",
             weight:"200g",
@@ -388,17 +389,23 @@ function Section2() {
             price:"₹50"
         },
     ]
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
   return (
     <>
+    {/* 1st */}
     <div className='dairycontainer'>
         <div className="section_title">
         Dairy, Bread & Eggs
         </div>
-    <div className='dairy_container'>
+      <div className='dairy_container'>
     <div className="main_dairy_con">
       {
         dairydata.map((dairy_data)=>{
+           
             const {id,img,productname,weight,price}=dairy_data;
+            // var titlepath = dairy_data.productname.replace(/\s+/g,'-').toLowerCase(); 
             return(
                 <div className="dairy_item" key={id}>
                  <div className="container1">
@@ -406,7 +413,11 @@ function Section2() {
                  </div>
                  <div className="container2">
                     <div className="name_weight">
-                        <div className="name">{productname}</div>
+                    <Link to={`/product/${dairy_data.id}`}>
+                        <div className="name" key={dairy_data.id} onClick={scrollToTop}>                          
+                            {productname}
+                        </div>
+                    </Link>   
                         <span className='weight'>{weight}</span>
                     </div>
                     <div className="btn_price">
@@ -421,8 +432,11 @@ function Section2() {
         })
       }    
     </div>  
+     </div>
+
     </div>
-    </div>
+
+    {/* 2nd */}
     <div className='dairycontainer'>
         <div className="section_title">
         Snacks & Munchies
@@ -456,6 +470,8 @@ function Section2() {
     </div>  
     </div>
     </div>
+
+    {/* 3rd */}
     <div className='dairycontainer'>
         <div className="section_title">
         Cold Drinks & Juices
@@ -489,6 +505,8 @@ function Section2() {
     </div>  
     </div>
     </div>
+
+    {/* 4th */}
     <div className='dairycontainer'>
         <div className="section_title">
         Candies & Gums

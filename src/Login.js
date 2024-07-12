@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 function Login() {
   return (
     <div>
+        {/* login header */}
        <div className='main_header'>
       <div className="container1">
         <div className="logo_con">
@@ -35,6 +36,8 @@ function Login() {
       </div>
  
        </div> 
+
+       
        {/* main login part */}
        <div className="login">
         <div className="login_con">
@@ -61,6 +64,8 @@ function Login() {
         </div>
         </div>
        {/* //// */}
+
+       {/* login footer */}
        <div>
         <div className="footer">
           <div className='main_footer'>
@@ -145,7 +150,7 @@ function Login() {
           <div className="footer_last">
     “Blinkit” is owned & managed by "Blink Commerce Private Limited" (formerly known as Grofers India Private Limited) and is not related, linked or interconnected in whatsoever manner or nature, to “GROFFR.COM” which is a real estate services business operated by “Redstone Consultancy Services Private Limited”.
           </div> 
-        </div>
+       </div>
     </div>
   )
 }

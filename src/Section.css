@@ -345,5 +345,13 @@
     {
         text-align: center;
     }
+    .login_con
+    {
+       width: 90%;
+    }
+    .lower_login span
+    {
+        text-align: center;
+    }
 }
 
