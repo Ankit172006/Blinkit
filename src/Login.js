@@ -48,7 +48,7 @@ function Login() {
             <div className="midel_login">
                 <div className="inputnumber">
                     +91
-                    <input type="text" name="" id="" placeholder='Enter Your Mobile Number' />
+                    <input type="number" name="" id="" placeholder='Enter Your Mobile Number' />
                 </div>
                 <Link to='/'>
                 <div className="submit">

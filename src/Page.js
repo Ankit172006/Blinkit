@@ -4,7 +4,7 @@ import Footer from './Footer';
 import Logo from './images/Logo.webp'
 import { Link } from 'react-router-dom';
 import "./Page.css"
-const dairydata =[
+const dataobj =[
   {
       id:1,
       img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/479207a.jpg?ts=1687950375",
@@ -110,10 +110,290 @@ const dairydata =[
       weight:"200g",
       price:"₹135"
   },
+  // 2nddata
+    {    
+      id:16,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/87199d95-d68a-49e0-8644-3695381d7faa.jpg?ts=1707313057",
+      productname:"Haldiram's Punjabi Tadka Namkeen ",
+      weight:"220g",
+      price:"₹54"
+     },
+     {
+      id:17,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/9af2d503-ad5d-4d10-b59a-981e39518c4c.jpg?ts=1717418804",
+      productname:"Doritos Sweet Chilli Flavour Nachos",
+      weight:"2 X 82.5g",
+      price:"₹80"
+     },
+     {
+      id:18,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/full_screen/pro_481985.jpg?ts=1710347281",
+      productname:"Haldiram's Classic Salted Peanuts ",
+      weight:"2 X 200g",
+      price:"₹103"
+     },
+     {
+      id:19,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/11150a.jpg?ts=1688463551",
+      productname:"Uncle Chipps Spicy Treat Flavour Potato",
+      weight:"50g",
+      price:"₹20"
+     },
+     {
+      id:20,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/19251a.jpg?ts=1687948393",
+      productname:"Haldiram's Lite Mixture Namkeen",
+      weight:"150g",
+      price:"₹35"
+     },
+     {
+      id:21,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/8ba69483-4edb-4d43-ab78-17d38bad99bb.jpg?ts=1708588995",
+      productname:"Haldiram's Punjabi Masala Papad",
+      weight:"200g",
+      price:"₹65"
+     },
+     {
+      id:22,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/240092a.jpg?ts=1687324818",
+      productname:"Lay's India's Magic Masala Potato Chips",
+      weight:"40g",
+      price:"₹20"
+     },
+     {
+      id:23,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/19274a.jpg?ts=1688625383",
+      productname:"Haldiram's Bhelpuri / Bhelpuri",
+      weight:"200g",
+      price:"₹50"
+     },
+     {
+      id:24,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/full_screen/pro_481990.jpg?ts=1710347281",
+      productname:"Haldiram's Boondi - Pack of 2",
+      weight:"440g",
+      price:"₹99"
+     },
+     {
+      id:24,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/11142a.jpg?ts=1688472268",
+      productname:"Haldiram's Fatafat Bhelpuri",
+      weight:"150g",
+      price:"₹35"
+     },
+     {
+      id:25,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/89515817-d207-4ddd-ac47-23ff26a1b1b5.jpg?ts=1718139903",
+      productname:"Cheetos Flamin' Hot Twisted Corn Puffs",
+      weight:"30g",
+      price:"₹171"
+     },
+     {
+      id:26,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/19266a.jpg?ts=1688625382",
+      productname:"Haldiram's Bhujia",
+      weight:"400g",
+      price:"₹111"
+     },
+     {
+      id:27,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/432818a.jpg?ts=1688444559",
+      productname:"Doritos Cheese Nachos",
+      weight:"60g",
+      price:"₹30"
+     },
+     {
+      id:28,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/1c227161-9280-43f0-81d5-dc6fee24b22b.jpg?ts=1708591572",
+      productname:"Haldiram's Lite Chiwda Namkeen",
+      weight:"150g",
+      price:"₹30"
+     },
+     {
+      id:29,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/a28f4dec-a3fb-4f9e-a4e5-8acfe5722a1f.jpg?ts=1707312781",
+      productname:"Lay's American Style Cream ",
+      weight:"40g",
+      price:"₹20"
+     },
+    //  3rd data
+     {
+      id:30,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/1f415f60-c955-4099-9056-a363383d51fb.jpg?ts=1709714322",
+      productname:"Hamdard Rooh Afza Rose Sharbat",
+      weight:"750ml",
+      price:"₹175"
+  },
+  {
+      id:31,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/cfeaa68b-2ce1-4c1e-95c5-450bbb9bb281.jpg?ts=1708591243",
+      productname:"Bisleri Packaged Water",
+      weight:"5l",
+      price:"₹70"
+  },
+  {
+      id:32,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/31ebb055-2c57-45ea-8174-9efd5645f68f.jpg?ts=1717418859",
+      productname:"Maaza Mango Drink 600 ml",
+      weight:"2 X 600 ml",
+      price:"₹76"
+  },
+  {
+      id:33,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/1f7b5070-0921-40c8-ba01-7847b2a84b03.jpg?ts=1719409251",
+      productname:"Real Fruit Power Coconut Water",
+      weight:"1l",
+      price:"₹91"
+  },
+  {
+      id:34,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/2217f2ec-4dc7-47ec-b67c-65fe1b848db4.jpg?ts=1707312716",
+      productname:"Red Bull Energy Drink (250 ml)",
+      weight:"250ml",
+      price:"₹125"
+  },
+  {
+      id:35,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/6b98633c-7c6a-4708-a372-e2b49da568ab.jpg?ts=1707312322",
+      productname:"Coca-Cola Soft Drink (750 ml)",
+      weight:"750ml",
+      price:"₹40"
+  },
+  {
+      id:36,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/29280a12-2e73-458c-912c-97a29b217229.jpg?ts=1707312715",
+      productname:"Real Activ Fibre+ Multi Fruit Juice",
+      weight:"1l",
+      price:"₹140"
+  },
+  {
+      id:37,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/071735a6-fd6a-49b0-af08-b634857645ea.jpg?ts=1708591243",
+      productname:"Bisleri Soda Water",
+      weight:"750ml",
+      price:"₹20"
+  },
+  {
+      id:38,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/ce7b1587-90c5-44c7-8191-41d36a2e2106.jpg?ts=1719382321",
+      productname:"Storia 100% Tender Coconut Water ",
+      weight:"1l",
+      price:"₹116"
+  },
+  {
+      id:39,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/374687a.jpg?ts=1688469730",
+      productname:"Sting Energy Drink (250 ml)",
+      weight:"250ml",
+      price:"₹20"
+  },
+  {
+      id:40,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/482620a.jpg?ts=1690813234",
+      productname:"Ice Cubes by Dras Ice",
+      weight:"1kg",
+      price:"₹70"
+  },
+  {
+      id:41,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/377a.jpg?ts=1697204030",
+      productname:"Gatorade Blue Bolt Flavour Drink",
+      weight:"500ml",
+      price:"₹50"
+  },
+  {
+      id:42,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/07749000-b488-422a-b89c-823d8a06bfcf.jpg?ts=1707312715",
+      productname:"Real Activ 100% Apple Juice",
+      weight:"1l",
+      price:"₹113"
+  },
+  {
+      id:43,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/401282a.jpg?ts=1687328280",
+      productname:"Real Fruit Power Masala Mixed Juice",
+      weight:"1l",
+      price:"₹72"
+  },
+  {
+      id:44,
+      img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/700eabda-0ece-4dee-b140-b18591978846.jpg?ts=1717833655",
+      productname:"Real Fruit Power Cranberry Juice",
+      weight:"1l",
+      price:"₹130"
+  },
+  // 4thdata
+  {
+    id:45,
+    img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/0cdb751e-a797-4f76-ba3d-00a4c6130c19.jpg?ts=1710154019",
+    productname:"Happydent Wave Sugarfree Mint Chewin",
+    weight:"29g",
+    price:"₹46"
+},
+{
+    id:46,
+    img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/440073a.jpg?ts=1704911343",
+    productname:"Orbit Mixed Fruit Flavour Chewing",
+    weight:"22g",
+    price:"₹50"
+},
+{
+    id:47,
+    img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/458221a.jpg?ts=1690815447",
+    productname:"Center Fresh Chewy Mints Spearmint",
+    weight:"33g",
+    price:"₹45"
+},
+{
+    id:48,
+    img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/495587a.jpg?ts=1680680930",
+    productname:"Center Fruit Pineapple Chewing Gum ",
+    weight:"67g",
+    price:"₹45"
+},
+{
+    id:49,
+    img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/495586a.jpg?ts=1690813422",
+    productname:"Center Fresh Sugar Free Mint Candy",
+    weight:"84g",
+    price:"₹35"
+},
+{
+    id:50,
+    img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/440074a.jpg?ts=1704911343",
+    productname:"Wrigley's Doublemint Lemonmint Candy",
+    weight:"32g",
+    price:"₹35"
+},
+{
+    id:51,
+    img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/495586a.jpg?ts=1690813422",
+    productname:"Center Fresh Sugar Free Mint Candy",
+    weight:"35g",
+    price:"₹84"
+},
+{
+    id:52,
+    img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/440074a.jpg?ts=1704911343",
+    productname:"Wrigley's Doublemint Lemonmint Candy",
+    weight:"32g",
+    price:"₹50"
+},
+{
+    id:53,
+    img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/440075a.jpg?ts=1704911343",
+    productname:"Wrigley's Doublemint Peppermint Candy",
+    weight:"32g",
+    price:"₹50"
+},
 ]
+
  function Page() {
   let {productid} =useParams();
-  var data = dairydata.find(p=> p.id === parseInt(productid));
+  var data =dataobj.find(p=> p.id === parseInt(productid));
+  // var data = snacksdata.find(p=> p.id === parseInt(productid));
+  // var data = juicesdata.find(p=> p.id === parseInt(productid));
+  // var data = candiesdata.find(p=> p.id === parseInt(productid));
   if(!data)
       {
         return (

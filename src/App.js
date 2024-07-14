@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<Combo/>}/>
-        <Route path='/login/sign_in' element={<Login/>}/>
+        <Route path='/login/sign_in'element={<Login/>}/>
         <Route path='/product/:productid' element={<Page/>}/>
        </Routes>
       </BrowserRouter>

@@ -6,7 +6,6 @@ function Section1() {
     const upperdata =[
     {   id:1,
         img:"https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-12/paan-corner_web.png",
-       
     },
     {   
         id:2,
@@ -84,14 +83,14 @@ function Section1() {
         <div className="upper_con">
        {
         upperdata.map((break_data)=>{
-            const { id, img, text} = break_data;
+            const { id, img} = break_data;
             return(
                 
                  <div className="item_container" key={id}>
                     <div className="img_con">
                         <img src={typeof img === 'string' ? img : img.default} alt="" />
                     </div>
-                    <div className="text_con">{text}</div>
+                    
                  </div>
              
             )

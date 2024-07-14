@@ -308,7 +308,7 @@
     flex-direction: column;
     align-items: center;
 }
-@media only screen and (max-width:565px)
+@media only screen and (max-width:1024px)
 {  
     .footer
     {
@@ -352,6 +352,10 @@
     .lower_login span
     {
         text-align: center;
+    }
+    .footer
+    {
+        height: auto;
     }
 }
 

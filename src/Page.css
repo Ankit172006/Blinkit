@@ -85,3 +85,28 @@
     width: 56px;
     height: 56px;
 }
+
+/* @media only screen and (max-width:565px)
+{
+    .product_detail
+    {
+        flex-direction: column;
+    }
+    .pro_info
+    {
+        width: 80%;
+        margin: 10%;
+    }
+} */
+@media only screen and (max-width:1024px)
+{
+    .product_detail
+    {
+        flex-direction: column;
+    }
+    .pro_info
+    {
+        width: 80%;
+        margin: 10%;
+    }  
+}

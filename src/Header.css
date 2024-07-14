@@ -132,8 +132,22 @@ height: 90px;
     justify-content: center;
     gap: 20px;
 }
-@media only screen and (max-width:565px)
+@media only screen and (max-width:1024px)
+
 {
+ .main_header
+ {
+        justify-content: space-between;
+ }
+ .container1
+ {
+    width: 30%;    
+ }
+ .container22
+ {
+    width: 50%;
+    justify-content: space-around;
+ }
  .location_con
  {
     display: none;
