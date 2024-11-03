@@ -2,8 +2,8 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import Footer from './Footer';
 import Logo from './images/Logo.webp'
-import { Link } from 'react-router-dom';
 import "./Page.css"
+import { Link } from 'react-router-dom';
 const dataobj =[
   {
       id:1,
@@ -391,18 +391,14 @@ const dataobj =[
  function Page() {
   let {productid} =useParams();
   var data =dataobj.find(p=> p.id === parseInt(productid));
-  // var data = snacksdata.find(p=> p.id === parseInt(productid));
-  // var data = juicesdata.find(p=> p.id === parseInt(productid));
-  // var data = candiesdata.find(p=> p.id === parseInt(productid));
   if(!data)
       {
         return (
-         <div> Sorry </div>
+         <div> Sorry page is not found </div>
         )
       }
-        return (
-        <>
-        {/* //header */}
+      else { return (
+       <>
        <>
        <div className='main_header'>
       <div className="container1">
@@ -461,8 +457,8 @@ const dataobj =[
           </div>
           <div className="right_d">
           <div className="btn">
-                            ADD
-                        </div>
+            ADD
+          </div>
           </div>
         </div>
         <div className="last_d">
@@ -502,7 +498,7 @@ const dataobj =[
         
        </div>
         <Footer/>
-        </>)
+      </>)}
  }
 
 export default Page

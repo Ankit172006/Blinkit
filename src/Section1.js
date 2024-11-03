@@ -121,3 +121,6 @@ function Section1() {
 }
 
 export default Section1
+
+
+// news api 82a60005abee455fb06cc6f5e485c180

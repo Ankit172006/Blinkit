@@ -1,6 +1,5 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Link } from 'react-router-dom'
-
 function Section2() {
     const dairydata =[
         {
@@ -389,9 +388,14 @@ function Section2() {
             price:"₹50"
         },
     ]
+    // const [cartcoming,setcartcoming] = useState()
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
+    const [cart, setCart] = useState([]);
+    const addToCart = (dairy_data) => {
+        setCart([...cart, dairy_data]);
+      };
   return (
     <>
     {/* 1st */}
@@ -400,13 +404,13 @@ function Section2() {
         Dairy, Bread & Eggs
         </div>
       <div className='dairy_container'>
-    <div className="main_dairy_con">
+      <div className="main_dairy_con">
       {
         dairydata.map((dairy_data)=>{
            
-            const {id,img,productname,weight,price}=dairy_data;
-            // var titlepath = dairy_data.productname.replace(/\s+/g,'-').toLowerCase(); 
+            const {id,img,weight,price,productname}=dairy_data;
             return(
+            <>
                 <div className="dairy_item" key={id}>
                  <div className="container1">
                     <img src={typeof img === 'string' ? img : img.default}  alt="" />
@@ -422,22 +426,26 @@ function Section2() {
                     </div>
                     <div className="btn_price">
                         <div className="price">{price}</div>
-                        <div className="btn">
+                        <div className="btn" onClick={() => addToCart(dairy_data)}>
                             ADD
                         </div>
+                        
                     </div>
                  </div>
+
                 </div>
+
+            </>
             )
         })
-      }    
-    </div>  
-     </div>
+      }   
 
+      </div>  
+     </div>
     </div>
 
     {/* 2nd */}
-    <div className='dairycontainer'>
+    {<div className='dairycontainer'>
         <div className="section_title">
         Snacks & Munchies
         </div>
@@ -462,7 +470,7 @@ function Section2() {
                     </div>
                     <div className="btn_price">
                         <div className="price">{price}</div>
-                        <div className="btn">
+                        <div className="btn" onClick={() => addToCart(snacksdata)} >
                             ADD
                         </div>
                     </div>
@@ -473,10 +481,10 @@ function Section2() {
       }    
     </div>  
     </div>
-    </div>
+    </div> }
 
-    {/* 3rd */}
-    <div className='dairycontainer'>
+    {/* // 3rd */}
+    { <div className='dairycontainer'>
         <div className="section_title">
         Cold Drinks & Juices
         </div>
@@ -512,10 +520,10 @@ function Section2() {
       }    
     </div>  
     </div>
-    </div>
+    </div>}
 
     {/* 4th */}
-    <div className='dairycontainer'>
+    { <div className='dairycontainer'>
         <div className="section_title">
         Candies & Gums
         </div>
@@ -551,9 +559,33 @@ function Section2() {
       }    
     </div>  
     </div>
-    </div>
+    </div>}
+    {/* <div  className={cartcoming?"cartcon cartcon2 ":"cartcon"}>
+  {cart.length > 0 ? (
+        <ul>
+          {cart.map((item, index) => (
+            <li key={index}>
+              <div className="cartitem">
+                <div className="cartproimg">
+                    <img src={item.img} alt="" />
+                </div>
+                <div className="cartproname">
+                    <p>{item.productname}</p>
+                </div>
+                <div className="cartproprice">
+                    <b>{item.price}</b>
+                </div>
+                <div className="cartproquti"></div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>Cart is empty</p>
+      )}
+    </div> */}
     </>
   )
 }
-
+//siyah ekran
 export default Section2
